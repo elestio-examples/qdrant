@@ -1,0 +1,16 @@
+version: "2"
+services:
+  qdrant:
+    image: qdrant/qdrant:${SOFTWARE_VERSION_TAG}
+    restart: always
+    container_name: qdrant
+    ports:
+      - 172.17.0.1:58630:6333
+      - 172.17.0.1:6334:6334
+    expose:
+      - 6333
+      - 6334
+      - 6335
+    volumes:
+      - ./qdrant_data:/qdrant/storage:z
+      - ./production.yaml:/qdrant/config/production.yaml
