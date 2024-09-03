@@ -12,7 +12,7 @@ Deploy Qdrant server with CI/CD on Elestio
 
 You can open Qdrant ADMIN UI here:
 
-    URL: https://[CI_CD_DOMAIN]/dashboard
+    URL: https://[CI_CD_DOMAIN]:6333/dashboard
     password: [ADMIN_PASSWORD]
 
 # Using Qdrant
@@ -20,7 +20,7 @@ You can open Qdrant ADMIN UI here:
 After deployment, you can access and utilize Qdrant with the provided credentials:
 
     host: [CI_CD_DOMAIN]
-    port: 443
+    port: 6333
     api_key: [ADMIN_PASWORD]
 
 # Examples
@@ -39,7 +39,7 @@ Then, create a new client instance:
 
     const client = new QdrantClient({
         host: "[CI_CD_DOMAIN]",
-        port: 443,
+        port: 6333,
         apiKey: "[ADMIN_PASWORD]",
     });
 
