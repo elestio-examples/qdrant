@@ -28,6 +28,6 @@ lifeCycleConfig:
   postRestoreCommand: "./scripts/postRestore.sh"
   postDeployCommand: "./scripts/postDeploy.sh"
 webUI:
-  - url: "https://[CI_CD_DOMAIN]/dashboard"
+  - url: "https://[CI_CD_DOMAIN]:6333/dashboard"
     label: "Qdrant Dashboard"
     password: "[ADMIN_PASSWORD]"
